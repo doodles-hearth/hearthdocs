@@ -13,13 +13,14 @@ export default defineConfig({
 			components: {SiteTitle: './src/starlightOverrides/SiteTitle.astro'},
 			sidebar: [
 				{
-					label: 'Guides',
-					autogenerate: { directory: 'guides' },
-				},
-				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
+				{
+					label: 'Guides',
+					autogenerate: { directory: 'guides' },
+				},
+
 			],
 			customCss: ['./src/styles/global.css'],
 		}),

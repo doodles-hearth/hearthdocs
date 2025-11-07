@@ -27,6 +27,4 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
-	site: 'https://izrofid.github.io',
-  	base: '/hearthdoc',
 });

@@ -46,4 +46,5 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
+	site: "https://hearthdocs.pages.dev",
 });

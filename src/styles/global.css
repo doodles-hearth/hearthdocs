@@ -4,45 +4,64 @@
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
+@font-face {
+  font-family: "Hatto";
+  src: url("/src/assets/fonts/hatto_regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
-	/*
+  /*
 	Configure your Tailwind theme that will be used by Starlight.
 	https://starlight.astro.build/guides/css-and-tailwind/#styling-starlight-with-tailwind
 	*/
-  /* Warm accent color — Amber */
-  --color-accent-50: var(--color-amber-50);
-  --color-accent-100: var(--color-amber-100);
-  --color-accent-200: var(--color-amber-200);
-  --color-accent-300: var(--color-amber-300);
-  --color-accent-400: var(--color-amber-400);
-  --color-accent-500: var(--color-amber-500);
-  --color-accent-600: var(--color-amber-600);
-  --color-accent-700: var(--color-amber-700);
-  --color-accent-800: var(--color-amber-800);
-  --color-accent-900: var(--color-amber-900);
-  --color-accent-950: var(--color-amber-950);
+  /* Generated accent color palettes. */
+  --color-accent-200: #e6bfa8;
+  --color-accent-600: #803d00;
+  --color-accent-900: #512400;
+  --color-accent-950: #381b07;
+  /* Generated gray color palettes. */
+  --color-gray-100: #fff5e3;
+  --color-gray-200: #ffebc7;
+  --color-gray-300: #d8bf8e;
+  --color-gray-400: #b28300;
+  --color-gray-500: #715200;
+  --color-gray-700: #4a3400;
+  --color-gray-800: #342400;
+  --color-gray-900: #221600;
 
-  /* Cozy neutral tone — Stone */
-  --color-gray-50: var(--color-stone-50);
-  --color-gray-100: var(--color-stone-100);
-  --color-gray-200: var(--color-stone-200);
-  --color-gray-300: var(--color-stone-300);
-  --color-gray-400: var(--color-stone-400);
-  --color-gray-500: var(--color-stone-500);
-  --color-gray-600: var(--color-stone-600);
+  /* Specker's colors */
+  --hearth-gray-1: oklch(0.6402 0.0412 90.62);
+  --hearth-gray-2: oklch(0.5583 0.0291 82.01);
+  --hearth-orange-1: oklch(0.9265 0.0782 77.64);
+  --hearth-orange-2: oklch(0.8971 0.1172 78.85);
+  --hearth-orange-3: oklch(0.7581 0.1545 63.07);
+  --hearth-brown-1: oklch(0.5184 0.0561 63.98);
+  --hearth-brown-2: oklch(0.4332 0.0513 51.64);
+  --color-stone-800: oklch(0.3108 0.0178 121.02);
+  --color-stone-700: oklch(0.3691 0.0171 120.83);
+  --color-stone-600: oklch(0.4163 0.02 142.43);
+  --color-stone-500: oklch(0.4574 0.0228 151.71);
+  --color-stone-400: oklch(0.5767 0.0322 164.45);
   --color-gray-700: var(--color-stone-700);
-  --color-gray-800: var(--color-stone-800);
-  --color-gray-900: var(--color-stone-900);
-  --color-gray-950: var(--color-stone-950);
+  --color-gray-600: var(--color-stone-600);
+  --color-gray-500: var(--color-stone-500);
+  --color-misc-error: #7a6660;
 
-
-
-
+  --font-hatto: "Hatto";
 }
-
 
 /*
 Add additional Tailwind styles to this file:
 https://tailwindcss.com/docs/adding-custom-styles#using-custom-css
 */
+
+h1 {
+  color: var(--color-accent-600);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-hatto);
+}

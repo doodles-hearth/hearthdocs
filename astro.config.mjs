@@ -5,18 +5,15 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-
 	integrations: [
 		starlight({
-			title: 'Pokemon Hearth',
+			title: 'Pokémon Hearth',
 			social: [
 				{ 
 					icon: 'discord', 
 					label: 'Discord', 
 					href: 'https://discord.gg/XDetmVQQZy' 
 				},
-				
-
 			],
 			editLink: {
 				baseUrl: 'https://github.com/izrofid/hearthdocs/edit/master',
@@ -24,19 +21,29 @@ export default defineConfig({
 			components: {SiteTitle: './src/starlightOverrides/SiteTitle.astro'},
 			sidebar: [
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'References',
+					items: [
+						{ slug: 'reference/about' },
+						{ slug: 'reference/new_features' },
+						{ label: 'PokéDex', link: 'https://hearth.eidex.pages.net/', attrs: {target: "_blank", rel: "noopener noreferrer", style: 'font-weight: bold'} },
+						{ label: 'Interactive Map', link: 'https://map.emeraldimperium.net/', attrs: {target: "_blank", rel: "noopener noreferrer", style: 'font-weight: bold'} },
+					]
 				},
 				{
 					label: 'Guides',
 					autogenerate: { directory: 'guides' },
 				},
 				{
-					label: 'Resources',
-					items:[
-						{ label: 'Online Dex', link: 'https://dex.emeraldimperium.net/', attrs: {target: "_blank",rel: "noopener noreferrer"} },
-						{ label: 'Interactive Map', link: 'https://map.emeraldimperium.net/', attrs: {target: "_blank",rel: "noopener noreferrer"} },
-					]
+					label: 'Characters',
+					autogenerate: { directory: 'characters' },
+				},
+				{
+					label: 'Locations',
+					autogenerate: { directory: 'locations' },
+				},
+				{
+					label: 'Items',
+					autogenerate: { directory: 'items' },
 				},
 
 			],

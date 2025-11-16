@@ -1,6 +1,6 @@
 ---
 title: New Features
-description: Explains color variants in Pokemon Hearth
+description: Explains new features in Pokémon Hearth
 ---
 import { Image } from 'astro:assets';
 import sillyNameImage from '../../../assets/screenshots/sillyname.png'
@@ -8,42 +8,38 @@ import noInformationImage from '../../../assets/screenshots/no_information_yet.p
 import cutMasterHouseImage from '../../../assets/screenshots/cut_master_house.png'
 
 
-### Pokedex system
-The Hearth Pokedex has a completely revamped system for obtainging information on pokemon. When you catch a new pokemon you won't get all the information on it. Instead as you explore the world you will encounter tidbits of information about various pokemon which you'll automatically "note down" in the pokedex. Explore everywhere to complete your pokedex. 
+### PokéDex system
+The Hearth PokéDex has a custom system for obtaining information on Pokémon. When you catch a new Pokémon, you won't get all the information on it. As you explore the world, you will find tidbits of information about various Pokémon which you'll automatically "write down" in the PokéDex. Explore everywhere to complete your PokéDex.
 
-##### Silly Names
-When a pokemon is encountered for the first time, it's name is not known to you. Instead the pokemon is refered to by a palceholder "silly name". Such as Joltik being called Little Spark. When you read or hear someone say a pokemon's name in the overworld you learn the name and the silly name will be replaced with the real name. Catching a pokemon will automatically have the player discover it's actual name.
+#### "Silly Names"
+When a Pokémon is encountered for the first time, its name is not known to you. Instead the Pokémon is refered to by a placeholder "silly name". Such as Joltik being called Little Spark. When you read or hear someone say a Pokémon's name in the overworld, you write it down in your PokéDex, and the silly name will be replaced with the real name. Catching a Pokémon will automatically have the player discover its actual name.
 
 <div class="flex flex-wrap justify-evenly">
 <Image src={sillyNameImage} alt=''></Image>
 <Image src={noInformationImage} alt=''></Image>
 </div>
 
-### Shiny Pokemon
-
-In addition to shiny pokemon Hearth features personality-based hue variations.
-
-Shiny Pokemon exist like they do in mainline pokemon games. These are independent of the hue variations. Shiny pokemon will sparkle when sent out and will be marked by a star in the summary screen. 
-
-The shiny odds are `1/4096` like in the mainline games post Generation 6. THis is about twice the rate in Pokemon Emerald.
-
-#### Color Variants
-Each individual pokemon has a unique hue variation depending on the personality (a hidden internal value). These are not the same as shinies. They're much more common and are unique to each individual pokemon (not the species).
-
 ### Field Move System
-Pokemon Hearth dispenses with the standard HM Moves system and replaces it with field moves which are categories of moves that can be used in the field.
+Pokémon Hearth replaces the standard HM system with field moves, which are categories of moves that can be used in the field.
 
-Once you are granted access to a field move, like the ability to smash rocks, you'll be able to use any "rock smash moves", such as Brick Break to smash rocks in the field. Or use Aerial Ace to cut trees.
+Example: Once you are granted the ability to smash rocks, you'll be able to use any moves that smash rocks, such as Brick Break, to smash rocks in the field.
 
-The following non-damaging TMs have been added to serve as field moves in case the player has nothing else.
+The following non-damaging Scrolls (TMs) serve as field moves in case the player has nothing else:
 
 - Nick (Cut)
 - Push (Strength)
 - Pebble Crush (Rock Smash)
 - Splash (Surf)
 - Sink (Dive)
-- Water Flail (Waterfall)
+- Water Fail (Waterfall)
 
 <Image src={cutMasterHouseImage} alt=''></Image>
 Find the Cut Master's house in Tranquil Route to get started!
 
+### Color Variations
+Each individual Pokémon has a unique hue variation depending on its personality (a hidden internal value). These are not the same as shinies.
+
+:::note[A note on shinies]
+**Shiny Pokémon** exist like they do in mainline Pokémon games. These are independent of the hue variations. Shiny Pokémon will sparkle when sent out and will be marked by a star in the summary screen.
+The shiny odds are `1/4096` like in the mainline games post Generation 6.
+:::
